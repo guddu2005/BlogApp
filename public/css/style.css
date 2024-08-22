@@ -15,7 +15,7 @@ body {
   
   nav ul {
     list-style: none;
-    padding: 0;
+    padding: 5px;
   }
   
   nav ul li {
@@ -74,10 +74,12 @@ body {
   }
   
   article p {
+    padding: 5px;
     margin-bottom: 0.5em;
   }
   
   article a {
+    padding: 5px;
     color: #007bff;
     text-decoration: none;
   }
@@ -132,6 +134,7 @@ p {
     font-size: 1em;
     color: #666;
     line-height: 1.6;
+    padding: 5px;
 }
 /* #signPage{ */
   /* margin-left: 600px; */
