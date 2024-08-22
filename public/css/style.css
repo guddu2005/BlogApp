@@ -74,12 +74,12 @@ body {
   }
   
   article p {
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 0.5em;
   }
   
   article a {
-    padding: 5px;
+    padding: 10px;
     color: #007bff;
     text-decoration: none;
   }
@@ -103,7 +103,7 @@ body {
 
 article {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -121,6 +121,7 @@ h3 {
 }
 
 h3 a {
+  padding: 10px;
     text-decoration: none;
     color: #007BFF;
     transition: color 0.3s ease;
@@ -134,7 +135,7 @@ p {
     font-size: 1em;
     color: #666;
     line-height: 1.6;
-    padding: 5px;
+    padding: 10px;
 }
 /* #signPage{ */
   /* margin-left: 600px; */
