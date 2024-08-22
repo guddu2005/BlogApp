@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3959/3959542.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .error_msg {
+            background-color: #fdd;
+            color: #d33;
+            border: 1px solid #d33;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group input::placeholder {
+            color: #888;
+        }
+
+        button.continue {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button.continue:hover {
+            background-color: #0056b3;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+        .create {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .create strong {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            button.continue {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            button.continue {
+                font-size: 12px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .form-group input {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <% if (locals.error) { %>
+            <div class="error_msg">
+                <%= locals.error %>
+            </div>
+        <% } %>
+        <form action="/auth/login" method="POST" id="signPage">
+            <div class="center-content">
+                <img src="https://static.vecteezy.com/system/resources/previews/007/037/924/non_2x/dry-cleaning-drying-cleaner-s-clothes-care-symbols-washing-concept-laundry-sign-icon-in-circle-round-black-color-illustration-flat-style-image-vector.jpg"
+                    style="height: 40px;">
+                <h5 style="margin-bottom: 40px;">Login to BlogApp</h5>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="emaillog" placeholder="Your Email address">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="Your User Password">
+            </div>
+            <button class="continue" type="submit">Continue</button>
+            <div class="center-content" style="margin-top: 10px;">
+                <h6 class="create"><a href="/signup">Don't have an account? </a><strong>Signup</strong></h6>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

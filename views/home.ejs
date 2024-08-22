@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Blog App</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3959/3959542.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.example.com/your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            animation: fadeIn 2s ease-in;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 50px;
+            animation: slideIn 1s ease-out;
+        }
+        .container p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            animation: bounceIn 1s ease;
+        }
+        .links a:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+        footer {
+            background: rgba(51, 51, 51, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounceIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog App</h1>
+    </header>
+    <div class="container">
+        <p>Welcome to My Blog App! Here,users can share their thoughts, ideas, and experiences with the world. It provides a clean and user-friendly interface for creating, editing, and managing blog posts. Visitors can explore a wide range of topics, while registered users can contribute their own content. The app offers features such as user authentication, allowing only registered users to post blogs, and ensures that each blog is associated with its author. The homepage is designed to guide new users, offering links to sign up, sign in, and access the latest blog posts, making it easy to engage with the content and the community..</p>
+        <div class="links">
+            <a href="/signup">Sign Up</a>
+            <a href="/login">Login In</a>
+            <a href="/blog">View All Blogs</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 My Blog App. All rights reserved.
+    </footer>
+</body>
+</html>

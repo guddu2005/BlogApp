@@ -1,0 +1,30 @@
+<%- include ('../layouts/main', {title: 'Home' , body: '' }) %>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <h2>All Blogs</h2>
+    <% if (messages && Object.keys(messages).length> 0) { %>
+        <% for (const type in messages) { %>
+            <% messages[type].forEach(function(message) { %>
+                <div class="flash-message <%= type %>">
+                    <%= message %>
+                </div>
+                <% }); %>
+                    <% } %>
+                        <% } %>
+                            <% blogs.forEach(blog=> { %>
+                                <article>
+                                    <h3>
+                                        <a href="/blog/<%= blog._id %>">
+                                            <%= blog.title %>
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        <%= blog.body.substring(0,50) %>
+                                    </p>
+                                    <p style="font-style: italic; color: #555; margin-top: 10px; color:green; "
+                                        onmouseover="this.style.color='#007bff'; this.style.backgroundColor='#f0f8ff';"
+                                        onmouseout="this.style.color='green'; this.style.backgroundColor='transparent';">
+                                        Author: <%= blog.author ? blog.author.name : 'Unknown' %>
+                                    </p>
+                                </article>
+                                <% }) %>

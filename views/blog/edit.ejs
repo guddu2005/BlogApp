@@ -1,0 +1,12 @@
+<%- include ('../layouts/main', {title: 'Edit Blog' , body: '' }) %>
+
+
+  <h2>Edit Your Blog</h2>
+  <form action="/blog/<%= blog._id %>?_method=PUT" method="POST">
+    <label for="title"> Title</label>
+    <input  required type="text" name="title" id="title" value="<%= blog?.title  %>">
+    <label for="body"> Body</label>
+    <textarea required  type="text" name="body" id="body" value="<%= blog?.body  %>"></textarea></textarea>
+
+    <button type="submit">Update Blog</button>
+  </form>
